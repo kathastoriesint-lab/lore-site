@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lore — Live your story</title>
+<meta name="description" content="You don't read the story. You live it. Lore turns stories into the app you already live in — a feed, DMs, and choices where you're the hero. Made for India, in your language.">
+<meta name="theme-color" content="#08080F">
+<link rel="icon" href="assets/lore-mark.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lore">
+<meta property="og:title" content="Lore — Live your story">
+<meta property="og:description" content="You don't read the story. You live it. A feed, DMs, and choices where you're the main character. Made for Indian Gen-Z.">
+<meta property="og:image" content="https://livelore.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://livelore.app">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lore — Live your story">
+<meta name="twitter:description" content="You don't read the story. You live it. A feed, DMs, and choices where you're the main character.">
+<meta name="twitter:image" content="https://livelore.app/og-image.png">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/colors.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/typography.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/base.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/styles.css">
+<script src="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/_ds_bundle.js"></script>
+<style>
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;position:relative}
+.sec{padding:clamp(72px,10vw,128px) 0;position:relative;scroll-margin-top:84px}
+.eyebrow{font:800 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.eyebrow.mutlbl{color:var(--ink3)}
+.h1{font-family:var(--serif);font-weight:600;font-size:clamp(42px,7.2vw,74px);line-height:1;letter-spacing:-.02em;color:var(--ink);margin:0}
+.h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.6vw,50px);line-height:1.05;letter-spacing:-.015em;margin:0;color:var(--ink)}
+.lead{font-size:clamp(16px,1.6vw,19px);line-height:1.6;color:var(--ink2);margin:0}
+.small{font-size:14px;line-height:1.55;color:var(--ink2);margin:0}
+.mut3{color:var(--ink3)}.accent{color:var(--accent)}
+.sec-head{max-width:660px}
+.sec-head .h2{margin-top:16px}
+.sec-head .lead{margin-top:18px}
+.glow-pink{position:absolute;border-radius:50%;filter:blur(100px);opacity:.42;pointer-events:none;z-index:0;background:var(--accent)}
+.nav{position:sticky;top:0;z-index:50;background:var(--scrim-blur);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:30px;height:30px;filter:drop-shadow(0 0 10px var(--accent-glow))}
+.brand-word{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:-.01em;color:var(--ink)}
+.nav-cta{display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:var(--r-pill);background:var(--accent);color:#fff;font-weight:700;font-size:14px;text-decoration:none;box-shadow:var(--sh-cta);transition:transform var(--t-press)}
+.nav-cta:active{transform:scale(.96)}
+.hero{position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:clamp(44px,6vw,92px) 0 clamp(60px,8vw,104px)}
+.hero-copy{max-width:600px}
+.hero-h1{margin-top:22px}
+.hero-sub{margin-top:22px;max-width:520px}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:34px}
+.btn-primary{display:inline-flex;align-items:center;gap:9px;height:54px;padding:0 28px;border-radius:var(--r-pill);background:var(--accent);color:#fff;font-weight:700;font-size:16px;text-decoration:none;box-shadow:var(--sh-cta);transition:transform var(--t-press)}
+.btn-primary:active{transform:scale(.98)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;height:54px;padding:0 6px;color:var(--ink2);font-weight:600;font-size:15px;text-decoration:none}
+.btn-ghost:hover{color:var(--ink)}
+.count-chip{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:9px 16px 9px 10px;border:1px solid var(--line);border-radius:var(--r-pill);background:rgba(255,255,255,.03)}
+.count-txt{font-size:13.5px;color:var(--ink3)}
+.count-txt b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
+.phone-wrap{display:flex;justify-content:center;position:relative;z-index:2}
+.phone{width:300px;height:614px;border-radius:46px;background:#0a0a12;box-shadow:var(--sh-phone);position:relative;overflow:hidden;border:1px solid #17171f}
+.phone-notch{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:98px;height:26px;background:#000;border-radius:20px;z-index:20}
+.phone-screen{position:absolute;inset:8px;border-radius:39px;overflow:hidden;background:var(--bg)}
+.hpanel{position:absolute;inset:0;opacity:0;transition:opacity .55s var(--ease-out),transform .55s var(--ease-out);overflow:hidden;pointer-events:none}
+.hp-feed{transform:translateY(10px)}
+.hp-dm{transform:translateY(34px)}
+.hp-choice{transform:translateY(10px)}
+[data-step="0"] .hp-feed,[data-step="1"] .hp-dm,[data-step="2"] .hp-choice{opacity:1;transform:none}
+.dm-head{display:flex;align-items:center;gap:10px;padding:14px 14px 13px;border-bottom:1px solid var(--line);background:var(--scrim-strong)}
+.dm-back{color:var(--ink2);flex:0 0 auto}
+.dm-name{font-weight:700;font-size:14px;color:#fff;line-height:1.15}
+.dm-status{font-size:11px;color:var(--trust)}
+.dm-body{padding:16px 14px 10px;display:flex;flex-direction:column;gap:9px}
+.dm-time{font-size:10px;color:var(--ink3);align-self:center;margin-bottom:4px;letter-spacing:.02em}
+.bubble{max-width:80%;padding:9px 13px;font-size:13px;line-height:1.4;border-radius:16px}
+.bub-in{align-self:flex-start;background:var(--surf);color:var(--ink);border:1px solid var(--line);border-bottom-left-radius:5px}
+.bub-out{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:5px}
+.typing{align-self:flex-start;display:flex;gap:5px;padding:12px 14px;background:var(--surf);border:1px solid var(--line);border-radius:16px;border-bottom-left-radius:5px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--ink3);display:block}
+.dm-quick{position:absolute;left:0;right:0;bottom:0;display:flex;gap:8px;padding:14px;flex-wrap:wrap;background:linear-gradient(0deg,var(--bg) 55%,transparent)}
+.pop-chip{position:absolute;bottom:88px;left:50%;transform:translate(-50%,12px);opacity:0;background:rgba(255,45,120,.18);border:1px solid var(--accent);color:#fff;font-weight:800;font-size:12px;padding:8px 14px;border-radius:var(--r-pill);z-index:10;backdrop-filter:blur(6px);transition:opacity .4s var(--ease-out),transform .45s var(--ease-pop);white-space:nowrap}
+.pop-chip.show{opacity:1;transform:translate(-50%,0)}
+.choice-narr{font-family:var(--serif);font-style:italic;font-size:13.5px;color:rgba(255,255,255,.8);padding:2px 16px 12px}
+.choice-list{padding:0 14px}
+.how-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:54px}
+.beat{background:var(--surf);border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;display:flex;flex-direction:column}
+.beat-vis{position:relative;background:var(--surf2);border-bottom:1px solid var(--line);height:266px;display:flex;justify-content:center;overflow:hidden}
+.beat-vis .mini{width:262px;flex:0 0 auto}
+.beat-fade{position:absolute;left:0;right:0;bottom:0;height:64px;background:linear-gradient(0deg,var(--surf) 8%,transparent);pointer-events:none;z-index:5}
+.beat-body{padding:22px 24px 26px}
+.beat-ico{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:var(--accent-wash);color:var(--accent);margin-bottom:15px}
+.beat-t{font-family:var(--serif);font-weight:600;font-size:21px;color:#fff;margin:0 0 9px}
+.beat-d{font-size:14.5px;line-height:1.55;color:var(--ink2);margin:0}
+.worlds-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:54px}
+.soon{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;align-items:center}
+.soon-label{font-size:13px;color:var(--ink3);font-weight:700;letter-spacing:.02em;margin-right:2px}
+.soon-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 17px;border:1px dashed var(--line);border-radius:var(--r-pill);color:var(--ink2);font-size:13.5px;font-weight:500;background:rgba(255,255,255,.02)}
+.why{position:relative;overflow:hidden;text-align:center}
+.why-img{position:absolute;inset:0;background:center/cover no-repeat;opacity:.3;z-index:0}
+.why-scrim{position:absolute;inset:0;background:radial-gradient(65% 75% at 50% 45%,rgba(8,8,15,.5),rgba(8,8,15,.94));z-index:1}
+.why-in{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:clamp(84px,13vw,164px) 0}
+.why-q{font-family:var(--serif);font-weight:500;font-size:clamp(27px,4.1vw,44px);line-height:1.22;color:#fff;letter-spacing:-.01em;margin:22px 0 0}
+.why-sub{margin:26px auto 0;font-size:17px;line-height:1.6;color:var(--ink2);max-width:560px}
+.why-tag{margin-top:32px;font-family:var(--serif);font-style:italic;font-size:23px;color:var(--accent)}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:50px;max-width:820px}
+.tcard{display:flex;align-items:center;gap:20px;padding:26px;background:var(--surf);border:1px solid var(--line);border-radius:var(--r-lg);transition:border-color var(--t-ui)}
+.tcard:hover{border-color:var(--accent-ring)}
+.tavatar{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:26px;color:#fff;flex:0 0 auto}
+.tav-a{background:linear-gradient(135deg,#ff2d78,#7a1140)}
+.tav-b{background:linear-gradient(135deg,#ff6aa6,#a02858)}
+.tname{font-family:var(--serif);font-weight:600;font-size:22px;color:#fff;line-height:1.1}
+.trole{font-size:13.5px;color:var(--ink3);margin-top:3px}
+.tlink{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font-size:13.5px;font-weight:600;color:var(--accent);text-decoration:none}
+.tlink:hover{text-decoration:underline}
+.final{position:relative;overflow:hidden;text-align:center;border-top:1px solid var(--line)}
+.final-in{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:clamp(74px,10vw,120px) 0}
+.final .h2{margin-top:16px}
+.final-sub{margin:18px auto 0;max-width:480px}
+.form{display:flex;gap:10px;margin:32px auto 0;max-width:470px}
+.email{flex:1;height:54px;padding:0 20px;border-radius:var(--r-pill);background:var(--surf);border:1px solid var(--line);color:var(--ink);font-size:15px;font-family:var(--sans);outline:none;transition:border-color var(--t-ui)}
+.email:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-ring)}
+.email::placeholder{color:var(--ink3)}
+.err{color:var(--heat);font-size:13px;margin-top:12px;min-height:18px;font-weight:500}
+.success{margin-top:24px;padding:24px;border:1px solid var(--accent);background:var(--accent-wash);border-radius:var(--r-lg);max-width:470px;margin-left:auto;margin-right:auto}
+.success .s-t{font-family:var(--serif);font-size:23px;font-weight:600;color:#fff}
+.foot{border-top:1px solid var(--line);padding:42px 0}
+.foot-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot-tag{font-family:var(--serif);font-style:italic;color:var(--ink2);font-size:15px}
+.foot-c{font-size:13px;color:var(--ink3)}
+.site.motion-ok .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.site.motion-ok .reveal.in{opacity:1;transform:none}
+.site.motion-ok .phone-float{animation:lore-float 6.5s ease-in-out infinite}
+@keyframes lore-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+.site.motion-ok .typing i{animation:lore-typing 1.3s infinite ease-in-out}
+.site.motion-ok .typing i:nth-child(2){animation-delay:.16s}
+.site.motion-ok .typing i:nth-child(3){animation-delay:.32s}
+@keyframes lore-typing{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (max-width:900px){
+.hero-grid{grid-template-columns:1fr;gap:44px}
+.hero-copy{text-align:center;margin:0 auto}
+.hero-sub,.sec-head{margin-left:auto;margin-right:auto}
+.hero-actions,.count-chip{justify-content:center}
+.sec-head{text-align:center}
+.how-grid,.worlds-grid,.team-grid{grid-template-columns:1fr}
+.team-grid{max-width:520px}
+}
+@media (max-width:520px){
+.wrap{padding:0 18px}
+.form{flex-direction:column}
+.foot-in{flex-direction:column;text-align:center;gap:14px}
+}
+</style>
+</helmet>
+<div class="site" ref="{{ rootRef }}">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#08080F"></rect><g transform="translate(50 50)"><circle r="22" fill="none" stroke="#FF2D78" stroke-width="6" stroke-dasharray="95 20" stroke-linecap="round"></circle><circle r="10.5" fill="none" stroke="#FF6AA6" stroke-width="5"></circle><circle r="3.6" fill="#FFB020"></circle></g></svg></template>
+<nav class="nav" data-screen-label="Nav">
+<div class="wrap nav-in">
+<a class="brand" href="#top" aria-label="Lore home"><img class="brand-mark" src="assets/lore-mark.svg" alt="Lore logo"><span class="brand-word">Lore</span></a>
+<a class="nav-cta" href="#waitlist">Join the waitlist</a>
+</div>
+</nav>
+<main id="top">
+<section class="hero" data-screen-label="Hero">
+<div class="glow-pink" style="width:460px;height:460px;right:-60px;top:2%"></div>
+<div class="glow-pink" style="width:300px;height:300px;left:-80px;bottom:-10%;opacity:.22"></div>
+<div class="wrap hero-grid">
+<div class="hero-copy reveal">
+<span class="eyebrow">Live your story</span>
+<h1 class="h1 hero-h1">You don't read the story. <span class="accent">You live it.</span></h1>
+<p class="lead hero-sub">Lore turns stories into the app you already live in — a feed, DMs, and choices where you're the hero. Made for India, in your language.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="#waitlist">Join the waitlist <span aria-hidden="true">→</span></a>
+<a class="btn-ghost" href="#how">See how it works</a>
+</div>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}">
+<div class="count-chip">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.AvatarStack" items="{{ heroCast }}" size="{{ 26 }}" border-color="var(--bg)" hint-size="80px,26px"></x-import>
+<span class="count-txt"><b class="js-count">2,400</b> already inside</span>
+</div>
+</sc-if>
+</div>
+<div class="phone-wrap reveal">
+<div class="phone phone-float">
+<div class="phone-notch"></div>
+<div class="phone-screen" data-step="{{ heroStep }}">
+<div class="hpanel hp-feed">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.MeterHUD" handle="@you" world-line="Creator House · Day 1 of 10" followers="{{ 48200 }}" avatar-initial="Y" hint-size="100%,104px"></x-import>
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Post" handle="ria.official" meta="Creator House · 2h" avatar-src="assets/avatars/ria.png" image-url="assets/scenes/seed-ria.png" full-caption="Stress? Main stress ko content mein convert karti hoon. 🤍" likes="84,291" liked="{{ true }}" hint-size="100%,360px"></x-import>
+</div>
+<div class="hpanel hp-dm">
+<div class="dm-head">
+<svg class="dm-back" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Avatar" dc-props="{{ dmRia }}" hint-size="42px,42px"></x-import>
+<div><div class="dm-name">riaofficial</div><div class="dm-status">online now</div></div>
+</div>
+<div class="dm-body">
+<div class="dm-time">TODAY · 11:04 PM</div>
+<div class="bubble bub-in">sun… kal wali baat. hum dono jaante hain kya hua tha. 👀</div>
+<div class="bubble bub-out">main kuch bolne wala nahi tha 🫢</div>
+<div class="bubble bub-in">good. kyunki aaj raat sab kuch badalne wala hai.</div>
+<div class="typing"><i></i><i></i><i></i></div>
+</div>
+<div class="dm-quick">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Chip" hint-size="auto,36px">wait what 👀</x-import>
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Chip" hint-size="auto,36px">spill kar</x-import>
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Chip" hint-size="auto,36px">block 😭</x-import>
+</div>
+</div>
+<div class="hpanel hp-choice">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.SituationHeader" tag="⚡ DAY 1 · MORNING" title="Pehla Kadam" paragraphs="{{ sitPara }}" hint-size="100%,150px"></x-import>
+<div class="choice-list">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.ChoiceCard" title="Loud entry — sabka dhyaan kheencho" subtitle="Confident, noisy, unforgettable." chosen="{{ chosenA }}" social-proof="{{ showProof }}" hint-size="100%,64px"></x-import>
+<x-import component-from-global-scope="LoreDesignSystem_022f97.ChoiceCard" title="Quiet entry — pehle observe karo" subtitle="Let the house come to you." dimmed="{{ dimB }}" hint-size="100%,64px"></x-import>
+</div>
+<div class="{{ chipCls }}">+2,140 followers</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sec" id="how" data-screen-label="How it works">
+<div class="wrap">
+<div class="sec-head reveal"><span class="eyebrow">How it works</span><h2 class="h2">Not a story you read. A world you enter.</h2><p class="lead">Four things happen the second you step in — and every one of them moves because of you.</p></div>
+<div class="how-grid">
+<div class="beat reveal">
+<div class="beat-vis">
+<div class="mini">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Post" handle="ria.official" meta="Creator House · 2h" avatar-src="assets/avatars/ria.png" image-url="assets/scenes/seed-ria.png" full-caption="Stress? Main stress ko content mein convert karti hoon. 🤍" likes="84,291" liked="{{ true }}" hint-size="100%,360px"></x-import>
+</div>
+<div class="beat-fade"></div>
+</div>
+<div class="beat-body">
+<span class="beat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M3 9h18M9 9v12"></path></svg></span>
+<h3 class="beat-t">A living feed</h3>
+<p class="beat-d">Characters post. You post. Comments, likes and drama roll in — it feels exactly like the app already open in your other tab.</p>
+</div>
+</div>
+<div class="beat reveal">
+<div class="beat-vis">
+<div class="mini">
+<div class="dm-head">
+<svg class="dm-back" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Avatar" dc-props="{{ dmKabir }}" hint-size="40px,40px"></x-import>
+<div><div class="dm-name">kabir.raw</div><div class="dm-status">online now</div></div>
+</div>
+<div class="dm-body">
+<div class="dm-time">TODAY · 11:12 PM</div>
+<div class="bubble bub-in">yaar entry toh maast honi chahiye 🔥</div>
+<div class="bubble bub-out">dekhte hain kaun yaad rakhta hai 😏</div>
+<div class="bubble bub-in">arre confidence! main tere saath hoon.</div>
+</div>
+</div>
+<div class="beat-fade"></div>
+</div>
+<div class="beat-body">
+<span class="beat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
+<h3 class="beat-t">DMs that feel real</h3>
+<p class="beat-d">Housemates slide into your DMs. You reply. Relationships build, break, or catch fire — one text at a time.</p>
+</div>
+</div>
+<div class="beat reveal">
+<div class="beat-vis">
+<div class="mini">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.SituationHeader" tag="⚡ DAY 1 · MORNING" title="Pehla Kadam" paragraphs="{{ sitPara }}" hint-size="100%,140px"></x-import>
+<div class="choice-list">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.ChoiceCard" title="Loud entry — sabka dhyaan kheencho" subtitle="Confident, noisy, unforgettable." chosen="{{ true }}" social-proof="63% chose this" hint-size="100%,64px"></x-import>
+<x-import component-from-global-scope="LoreDesignSystem_022f97.ChoiceCard" title="Quiet entry — pehle observe karo" subtitle="Let the house come to you." dimmed="{{ true }}" hint-size="100%,64px"></x-import>
+</div>
+</div>
+<div class="beat-fade"></div>
+</div>
+<div class="beat-body">
+<span class="beat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L9 22l9-12h-6.5L13 2z"></path></svg></span>
+<h3 class="beat-t">Choices that matter</h3>
+<p class="beat-d">Cinematic moments where you decide. What you pick reshapes the story, the cast, and how the internet sees you.</p>
+</div>
+</div>
+<div class="beat reveal">
+<div class="beat-vis" style="align-items:center">
+<div class="mini">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.MeterHUD" handle="@you" world-line="Creator House · Day 4 of 10" followers="{{ 128400 }}" avatar-initial="Y" hint-size="100%,104px"></x-import>
+<div style="padding:14px 16px 0;font-size:12.5px;color:var(--ink3);line-height:1.5">Fame climbs your followers. Heat and Trust decide who's still in your corner.</div>
+</div>
+</div>
+<div class="beat-body">
+<span class="beat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="15 7 21 7 21 13"></polyline></svg></span>
+<h3 class="beat-t">Real stakes</h3>
+<p class="beat-d">Become the main character as your followers climb — and win someone over. Every meter moves because of something you did.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sec" id="worlds" data-screen-label="The Worlds">
+<div class="glow-pink" style="width:380px;height:380px;left:-120px;top:20%;opacity:.18"></div>
+<div class="wrap">
+<div class="sec-head reveal"><span class="eyebrow">The Worlds</span><h2 class="h2">Pick a world. Become the main character.</h2><p class="lead">Each world is a living drama with its own cast, season, and rules. Two are live. More are coming.</p></div>
+<div class="worlds-grid">
+<div class="reveal">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.WorldCard" name="Creator House" teaser="6 creators, ek villa, 10 din. Internet dekh raha hai — chha gaye toh finale tumhara." image-url="assets/scenes/seed-villa.png" status="LIVE · SEASON 1" live="{{ true }}" cast="{{ castCreator }}" meta="6 creators · 1.2M watching" cover-height="{{ 432 }}" hint-size="100%,500px"></x-import>
+</div>
+<div class="reveal">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.WorldCard" name="Indian Dressing Room" teaser="16 saal. MI debut. India tak ka safar. Pressure sirf pitch pe nahi hai." image-url="assets/scenes/cricket-wankhede.png" status="LIVE · SEASON 1" status-color="#FFB020" live="{{ true }}" cast="{{ castCricket }}" meta="MI squad · 4.8M watching" ring-color="rgba(0,120,255,.42)" cover-height="{{ 432 }}" hint-size="100%,500px"></x-import>
+</div>
+</div>
+<div class="soon reveal">
+<span class="soon-label">Coming soon</span>
+<span class="soon-chip"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>College Hostel</span>
+<span class="soon-chip"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Indian Mythology</span>
+<span class="soon-chip"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Corporate Drama</span>
+</div>
+</div>
+</section>
+<section class="why" id="why" data-screen-label="The Why">
+<div class="why-img" style="background-image:url(assets/scenes/scene-terrace-night.png)" role="img" aria-label="A quiet terrace lit by string lights at night"></div>
+<div class="why-scrim"></div>
+<div class="wrap why-in reveal">
+<span class="eyebrow mutlbl">The why</span>
+<p class="why-q">India's Gen-Z spends every night inside stories that were never theirs. Lore makes you the hero of one that <span class="accent">is</span>.</p>
+<p class="why-sub">We think the next great storytelling medium is interactive, personal, and phone-native — stories you don't watch, you star in.</p>
+<p class="why-tag">Live your story.</p>
+</div>
+</section>
+<section class="sec final" id="waitlist" data-screen-label="Waitlist">
+<div class="glow-pink" style="width:520px;height:400px;left:50%;top:-10%;transform:translateX(-50%);opacity:.3"></div>
+<div class="wrap final-in reveal">
+<span class="eyebrow">The waitlist</span>
+<h2 class="h2">Be first inside.</h2>
+<p class="lead final-sub">We're opening Lore to a small first cast. Drop your email and lock your spot — takes ten seconds.</p>
+<sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+<div class="success" role="status"><div class="s-t">One last step. 🤍</div><p class="small" style="margin-top:8px;color:var(--ink2)">We opened a 10-second form in a new tab — finish it and your spot is locked. Didn't open? <a href="{{ formUrl }}" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:600">Open the form here</a>.</p></div>
+</sc-if>
+<sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+<form class="form" onSubmit="{{ submit }}" novalidate="novalidate">
+<input class="email" type="email" name="email" placeholder="tumhara@email.com" aria-label="Email address" value="{{ email }}" onChange="{{ onEmail }}" autocomplete="email">
+<x-import component-from-global-scope="LoreDesignSystem_022f97.Button" type="submit" full-width="{{ false }}" hint-size="170px,54px">{{ btnText }}</x-import>
+</form>
+<div class="err" role="alert">{{ error }}</div>
+</sc-if>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}">
+<p class="small mut3" style="margin-top:20px"><b class="js-count" style="color:var(--ink);font-weight:800">2,400</b>+ already inside · No spam, just the drop.</p>
+</sc-if>
+</div>
+</section>
+<section class="sec" id="team" data-screen-label="Team">
+<div class="wrap">
+<div class="sec-head reveal"><span class="eyebrow mutlbl">Two people, one obsession</span><h2 class="h2">Built by two people who couldn't stop talking about it.</h2></div>
+<div class="team-grid">
+<div class="tcard reveal">
+<div class="tavatar tav-a" aria-hidden="true">M</div>
+<div>
+<div class="tname">Manavi Garg</div>
+<div class="trole">Cofounder</div>
+<a class="tlink" href="https://www.linkedin.com/in/manavi-garg-867b9215b/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.35c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9z"></path></svg>Connect on LinkedIn</a>
+</div>
+</div>
+<div class="tcard reveal">
+<div class="tavatar tav-b" aria-hidden="true">N</div>
+<div>
+<div class="tname">Nabh Garg</div>
+<div class="trole">Cofounder</div>
+<a class="tlink" href="https://www.linkedin.com/in/nabhgarg/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.35c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9z"></path></svg>Connect on LinkedIn</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="foot" data-screen-label="Footer">
+<div class="wrap foot-in">
+<a class="brand" href="#top" aria-label="Lore home"><img class="brand-mark" src="assets/lore-mark.svg" alt="Lore logo"><span class="brand-word">Lore</span></a>
+<span class="foot-tag">Live your story.</span>
+<span class="foot-c">© 2026 Lore</span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;showCounter&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;waitlistFormUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://docs.google.com/forms/d/e/1FAIpQLSeQuso1e3k4XuoBBOuDVrbyNtvfx0ceQJBazJVH9dhv8mV1tw/viewform&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Waitlist&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  countTarget = 2417;
+  state = { heroStep: 0, choiceMade: false, email: '', submitted: false, error: '', loading: false };
+
+  get formUrl() { return this.props.waitlistFormUrl || 'https://docs.google.com/forms/d/e/1FAIpQLSeQuso1e3k4XuoBBOuDVrbyNtvfx0ceQJBazJVH9dhv8mV1tw/viewform'; }
+  get autoplay() { return this.props.heroAutoplay !== false; }
+  get counterOn() { return this.props.showCounter !== false; }
+
+  componentDidMount() {
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.reduced = reduced;
+    const root = this.rootRef.current || document.querySelector('.site');
+    this.root = root;
+    if (root && !reduced) root.classList.add('motion-ok');
+    if (root) {
+      const els = Array.prototype.slice.call(root.querySelectorAll('.reveal'));
+      if (reduced) {
+        els.forEach((el) => el.classList.add('in'));
+      } else {
+        const vh = () => window.innerHeight || document.documentElement.clientHeight || 800;
+        const check = () => {
+          for (let i = 0; i < els.length; i++) {
+            const el = els[i];
+            if (el.classList.contains('in')) continue;
+            const r = el.getBoundingClientRect();
+            if (r.top < vh() * 0.92 && r.bottom > -40) el.classList.add('in');
+          }
+        };
+        this._revealCheck = check;
+        check();
+        requestAnimationFrame(check);
+        document.addEventListener('scroll', check, true);
+        window.addEventListener('resize', check);
+        this._revealFallback = setTimeout(() => els.forEach((el) => el.classList.add('in')), 2600);
+      }
+    }
+    this.setupCount(reduced, root);
+    if (this.autoplay && !reduced) {
+      this._t = setInterval(() => this.setState((s) => ({ heroStep: (s.heroStep + 1) % 3, choiceMade: false })), 3800);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.heroStep === 2 && prevState.heroStep !== 2 && !this.reduced) {
+      clearTimeout(this._ct);
+      this._ct = setTimeout(() => this.setState({ choiceMade: true }), 1200);
+    }
+  }
+
+  componentWillUnmount() { clearInterval(this._t); clearTimeout(this._ct); clearTimeout(this._revealFallback); if (this._revealCheck) { document.removeEventListener('scroll', this._revealCheck, true); window.removeEventListener('resize', this._revealCheck); } }
+
+  setupCount(reduced, root) {
+    if (!root || !this.counterOn) return;
+    const nodes = root.querySelectorAll('.js-count');
+    if (!nodes.length) return;
+    const fmt = (v) => v.toLocaleString('en-IN');
+    const set = (v) => nodes.forEach((n) => { n.textContent = fmt(v); });
+    if (reduced) { set(this.countTarget); return; }
+    const from = Math.max(0, this.countTarget - 380), dur = 1300;
+    const start = () => {
+      const t0 = performance.now();
+      const tick = (t) => { const p = Math.min(1, (t - t0) / dur); const e = 1 - Math.pow(1 - p, 3); set(Math.round(from + (this.countTarget - from) * e)); if (p < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    };
+    setTimeout(start, 450);
+  }
+
+  bumpCount() {
+    this.countTarget++;
+    if (this.root && this.counterOn) this.root.querySelectorAll('.js-count').forEach((n) => { n.textContent = this.countTarget.toLocaleString('en-IN'); });
+  }
+
+  onEmail = (e) => this.setState({ email: e.target.value, error: '' });
+
+  submit = (e) => {
+    e.preventDefault();
+    const email = (this.state.email || '').trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { this.setState({ error: 'Enter a valid email address' }); return; }
+    const url = this.formUrl;
+    if (url) { try { window.open(url, '_blank', 'noopener,noreferrer'); } catch (_) {} }
+    try { localStorage.setItem('lore_waitlist', email); } catch (_) {}
+    this.bumpCount();
+    this.setState({ submitted: true, error: '' });
+  };
+
+  renderVals() {
+    const { heroStep, choiceMade, email, submitted, error, loading } = this.state;
+    const done = heroStep === 2 && choiceMade;
+    return {
+      rootRef: this.rootRef,
+      heroStep: String(heroStep),
+      chosenA: done,
+      dimB: done,
+      showProof: done ? '63% chose this' : '',
+      chipCls: done ? 'pop-chip show' : 'pop-chip',
+      showCounter: this.counterOn,
+      heroCast: [{ src: 'assets/avatars/ria.png' }, { src: 'assets/avatars/kabir.png' }, { src: 'assets/avatars/zoya.png' }],
+      castCreator: [{ src: 'assets/avatars/ria.png' }, { src: 'assets/avatars/kabir.png' }, { src: 'assets/avatars/ananya.png' }, { src: 'assets/avatars/dev.png' }, { src: 'assets/avatars/zoya.png' }],
+      castCricket: [{ src: 'assets/avatars/rohit.png' }, { src: 'assets/avatars/bumrah.png' }, { src: 'assets/avatars/surya.png' }],
+      sitPara: ['Villa ka gate khulta hai. Sab tumhe dekh rahe hain — kya karoge?'],
+      dmRia: { src: 'assets/avatars/ria.png', size: 36, ring: true },
+      dmKabir: { src: 'assets/avatars/kabir.png', size: 34, ring: true },
+      email, submitted, notSubmitted: !submitted, error, loading,
+      onEmail: this.onEmail, submit: this.submit, formUrl: this.formUrl,
+      btnText: loading ? 'Joining…' : 'Join the waitlist',
+    };
+  }
+}
+</script>
+</body>
+</html>

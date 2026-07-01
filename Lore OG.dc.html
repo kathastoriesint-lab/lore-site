@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/colors.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/lore-design-system-022f9707-b2df-454b-8b26-63015fe41a7c/tokens/base.css">
+<style>
+.og{position:relative;width:1200px;height:630px;overflow:hidden;background:var(--bg);font-family:var(--sans)}
+.og-bg{position:absolute;inset:0;background:center/cover no-repeat url(assets/scenes/seed-villa.png)}
+.og-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,15,.97) 28%,rgba(8,8,15,.72) 54%,rgba(8,8,15,.28) 100%)}
+.og-scrim2{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,15,.8),transparent 50%)}
+.og-glow{position:absolute;width:520px;height:520px;border-radius:50%;background:var(--accent);filter:blur(120px);opacity:.28;left:-120px;bottom:-160px}
+.og-in{position:absolute;inset:0;padding:60px 72px;display:flex;flex-direction:column;justify-content:space-between;z-index:3}
+.og-brand{display:flex;align-items:center;gap:14px}
+.og-mark{width:46px;height:46px;filter:drop-shadow(0 0 14px var(--accent-glow))}
+.og-word{font-family:var(--serif);font-weight:600;font-size:38px;color:#fff;letter-spacing:-.01em}
+.og-live{display:inline-flex;align-items:center;gap:8px;margin-left:6px;padding:7px 13px;border-radius:var(--r-pill);background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);font-size:13px;font-weight:800;letter-spacing:.08em;color:#fff}
+.og-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+.og-eye{font-weight:800;font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.og-h1{font-family:var(--serif);font-weight:600;font-size:72px;line-height:.98;letter-spacing:-.025em;color:#fff;margin:20px 0 0;max-width:840px}
+.og-accent{color:var(--accent)}
+.og-sub{font-size:23px;line-height:1.42;color:var(--ink2);margin:24px 0 0;max-width:660px}
+.og-tag{font-family:var(--serif);font-style:italic;font-size:27px;color:var(--accent);margin-top:22px}
+</style>
+</helmet>
+<div class="og">
+<div class="og-bg lore-grain"></div>
+<div class="og-scrim"></div>
+<div class="og-scrim2"></div>
+<div class="og-glow"></div>
+<div class="og-in">
+<div class="og-brand"><img class="og-mark" src="assets/lore-mark.svg" alt="Lore"><span class="og-word">Lore</span><span class="og-live"><span class="og-dot"></span>NOW CASTING</span></div>
+<div>
+<span class="og-eye">Live your story</span>
+<h1 class="og-h1">You don't read the story. <span class="og-accent">You live it.</span></h1>
+<p class="og-sub">Interactive stories as a feed, DMs and choices — where you're the main character. Made for India, in Hinglish.</p>
+<div class="og-tag">Live your story.</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:630}}"></script>
+</body>
+</html>
