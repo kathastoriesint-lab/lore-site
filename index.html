@@ -224,10 +224,12 @@ document.addEventListener('DOMContentLoaded', async function() {
           + '<div style="font-family:var(--serif,Georgia),serif;font-size:24px;font-weight:600;margin-bottom:6px">You’re on the list 🎉</div>'
           + '<div style="opacity:.7;font-size:14px">First-cast access is coming to your inbox.</div></div>';
       };
+      var settled = false, finish = function () { if (settled) return; settled = true; done(); };
+      setTimeout(finish, 6000); // never hang on "Joining…"
       fetch(WEEV_SHEET_ENDPOINT, {
-        method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({ name: n, email: em, phone: ph, source: 'waitlist-site' })
-      }).then(done).catch(done);
+      }).then(finish).catch(finish);
     };
     form.addEventListener('submit', handler, true);
     form.onsubmit = handler;
